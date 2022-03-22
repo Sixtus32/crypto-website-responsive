@@ -23,33 +23,65 @@ if(menu.navClose)
 
 
                     //CARD BODY
-// const article = {
-//     card : document.querySelectorAll('card-list'),
-//     like : document.querySelectorAll('cards-interaction')
-// }
+const article = {
+    card : document.querySelectorAll('.home__cards-info'),
+    like : document.querySelectorAll('.home__cards-int')
+}
 
-// if (article.card)
-// {
-//     article.card.forEach.addEventListener('click', () =>{
-//         article.like.forEach.classList.add('appaer-int');
-//     })
-// }
+function cardRespondShow ()
+{
+    article.like.forEach(n => n.classList.add('appaer-int'));
+}
 
-// if(article.like)
-// {
-//     article.like.forEach.getElementById('cards-interaction').addEventListener('click', ()=> {
-//         article.like.classList.remove('appaer-int');
-//     })
-// }
+article.card.forEach(n => n.addEventListener('click', cardRespondShow));
+
 
 /*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll('.nav__link');
+
+function linkAction()
+{
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show-menu');
+}
+
+navLink.forEach(n => n.addEventListener('click', linkAction));
 
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+function scrollHeader ()
+{
+    const header = document.getElementById('header');
+    //Cuando se produce el scroll pasa esto:
+    this.scrollY >= 50 ? header.classList.add('scroll-header'):header.classList.remove('scroll-header');
+}
 
-
-/*=============== POPULAR SWIPER ===============*/
-
+window.addEventListener('scroll', scrollHeader);
+/*=============== HOME CARDS SWIPER ===============*/
+let swiperHomeCard = new Swiper(".swiper", { 
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        }, 
+        breakpoints: {
+        768: 
+        {
+            slidesPerView: 3,
+        },
+        1024: 
+        {
+            spaceBetween: 48,
+        },
+    },
+});
 
 /*=============== MIXITUP FILTER FEATURED ===============*/
 

@@ -11,7 +11,7 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
         <!--=============== SWIPER CSS ===============-->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css"/>
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
@@ -77,7 +77,9 @@
             <!--==================== HOME ====================-->
             <!-- <img src="./unfts-img/mobile-v1.jpg" alt="" class="pruebas-color"> -->
             <section class="home section" id="discover">
-               
+                
+                <div class="card__shape shape"></div>
+
                 <div class="home__container container grid">
 
                     <div class="home__data">
@@ -95,9 +97,9 @@
                         </p>
                     </div>
 
-                    <div class="home__cards grid">
-
-                        <article class="home__cards-info" id="card-list">
+                    <div class="home__cards container grid swiper">
+                        <div class="swiper-wrapper">
+                            <article class="home__cards-info swiper-slide">
 
                             <img src="assets/img/home-card-image-1.jpg" alt="Cards Image" class="home__cards-img">
 
@@ -140,8 +142,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </article>
-                        <article class="home__cards-info" id="card-list">
+                            </article>
+                            <article class="home__cards-info swiper-slide">
 
                             <img src="assets/img/home-card-image-2.jpg" alt="Cards Image" class="home__cards-img">
 
@@ -184,8 +186,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </article>
-                        <article class="home__cards-info" id="card-list">
+                            </article>
+                            <article class="home__cards-info swiper-slide">
 
                             <img src="assets/img/home-card-image-3jpg.jpg" alt="Cards Image" class="home__cards-img">
 
@@ -228,8 +230,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </article>
-                        <article class="home__cards-info" id="card-list">
+                            </article>
+                            <article class="home__cards-info swiper-slide">
 
                             <img src="assets/img/home-card-image-4.jpg" alt="Cards Image" class="home__cards-img">
 
@@ -272,8 +274,8 @@
                                     </button>
                                 </div>
                             </div>
-                        </article>
-                        <article class="home__cards-info" id="card-list">
+                            </article>
+                            <article class="home__cards-info swiper-slide">
 
                             <img src="assets/img/home-card-image-5.jpg" alt="Cards Image" class="home__cards-img">
 
@@ -316,7 +318,10 @@
                                     </button>
                                 </div>
                             </div>
-                        </article>
+                            </article>
+                        </div>
+                        <div class="swiper-pagination">
+                        </div>
                     </div>
 
                     <div class="home__button">
@@ -332,17 +337,86 @@
             </section>
 
             <!--==================== WORK ====================-->
-            <section class="about section" id="work">
-                
+            <section class="work section" id="work">
+                <div class="work__container container">
+                    <h3 class="section__title work__title">
+                        How it Works
+                    </h3>
+
+                    <div class="work__data grid">
+                        <article class="work__cards">
+                            <div class="work__cards-img">
+                                <i class="ri-wallet-3-fill"></i>
+                            </div>
+                            <div class="work__cards-data">
+                                <h4 class="work__cards-title">
+                                    Set up your Wallet
+                                </h4>
+                                <p class="work__cards-description">
+                                    Once you&apos;ve set up your wallet of choice, connect it to Unfts by clicking the wallet icon in the top right corner.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="work__cards">
+                            <div class="work__cards-img">
+                                <i class="ri-layout-2-fill"></i>
+                            </div>
+                            <div class="work__cards-data">
+                                <h4 class="work__cards-title">
+                                    Create your Collection
+                                </h4>
+                                <p class="work__cards-description">
+                                    Click My Collections and set up your collection. Add social links, a description, profile & banner images, and set a secondary sales fee.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="work__cards">
+                            <div class="work__cards-img">
+                                <i class="ri-image-2-fill"></i>
+                            </div>
+                            <div class="work__cards-data">
+                                <h4 class="work__cards-title">
+                                    Add your NFTs
+                                </h4>
+                                <p class="work__cards-description">
+                                    Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs with properties, stats, and unlockable content.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </section>
 
             <!--==================== AUCTION ====================-->
-            <section class="popular section" id="popular">
+            <section class="auction section" id="popular">
+                <div class="auction__container container">
+                    <h3 class="section__title auction__title">
+                        Live Auctions
+                    </h3>
+
+                    <div class="auction__data grid">
+                        <article class="auction__cards">
+                            <div class="auction__cards-data">
+                                <img src="assets/img/auctions-card-image-1.jpg" alt="Auctions Collections Image" class="auction__cards-img">
+                                <p class="auction__cards-timing">
+                                    00:03:45
+                                </p>
+                                <div class="auction__cards-info"></div>
+                            </div>
+                            <button class="auction__cards-button">
+                                Place your Bid
+                            </button>
+                        </article>
+                        <article class="auction__cards"></article>
+                        <article class="auction__cards"></article>
+                    </div>
+
+                </div>
                 
             </section>
 
             <!--==================== PARTNERS ====================-->
-            <section class="features section">
+            <section class="partener section">
                 
             </section>
 
@@ -359,6 +433,11 @@
             <!--==================== COLLECTION ====================-->
             <section class="collection section" id="collectors">
                 
+            </section>
+
+            <!--=================== POPULAR =========================-->
+            <section class="popular section">
+
             </section>
 
             <!--=================== JOIN ==========================-->
@@ -380,7 +459,7 @@
         <script src=""></script>
 
         <!--=============== SWIPER JS ===============-->
-        <script src=""></script>
+       <script src="./assets/js/swiper-bundle.min.js"></script>
 
         <!--=============== MIXITUP JS ===============-->
         <script src=""></script>

@@ -60,7 +60,7 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: var(--body-color);
+  background-color: #011114;
   color: var(--text-color);
 }
 
@@ -85,8 +85,8 @@ img {
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 1024px;
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
+  margin-right: 1.2rem;
+  margin-left: 1.2rem;
 }
 
 .grid {
@@ -101,7 +101,11 @@ img {
 .section__title {
   font-size: var(--h2-font-size);
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem; 
+  font-family: var(--body-heading-font);
+  color: var(---light-first-color);
+  justify-self: center;
+  align-self: center;
 }
 
 .main {
@@ -165,6 +169,12 @@ img {
 
 @media screen and (max-width: 767px)
 {
+
+  body
+  {
+    /* background-image: url('../img/bg-body-image-1.jpg'); */
+    background-color: #011114;
+  }
   .nav__menu
   {
     position: fixed;
@@ -174,7 +184,7 @@ img {
     right: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(96px);
+    /* backdrop-filter: blur(96px); */
     transition: .3s;
     text-align: center;
   }
@@ -272,8 +282,13 @@ img {
 }
 
 /* Change background header */
-
-
+.scroll-header
+{
+  border-radius: 1rem 1rem 1rem 1rem;
+  background-color: #011114;
+  box-shadow: 0 3px 6px #529CB3;
+  opacity: .990;
+}
 /* Active link */
 
 
@@ -287,7 +302,7 @@ img {
 .home__container
 {
   position: relative;
-  padding-top: 3.75rem;
+  padding-top: 50px;
   row-gap: 1.5rem;
 }
 
@@ -319,15 +334,20 @@ img {
 }
 
 /* CARDS */
+.home__cards
+{
+  padding-top: 1rem;
+}
+
 .home__cards-info
 {
   position: relative;
   width: 280px;
+  background-color: #013055;
   height: 280px;
-  justify-self: center;
-  background-color: #013752;
-  border-radius: .5rem;
-  cursor: pointer;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
 }
 
 .home__cards-img
@@ -336,6 +356,12 @@ img {
   height: 225px;
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
+}
+
+.home__cards-info:hover .user__data-img
+{
+  transform: translateY(-.15rem);
+  border: 1.5px solid var(--dark-first-color);
 }
 
 
@@ -471,9 +497,11 @@ img {
   font-weight: 500;
   color: var(--white-color);
   background-color: #013055;
-  border-radius: .275rem;
+  border-radius: .3rem;
   margin-right: .65rem;
-  padding: 0 5px;
+  padding: 0.15rem .7rem;
+  outline: none;
+
 }
 
 
@@ -530,19 +558,97 @@ img {
   }
 }
 
+/* CARD SHAPE */
+.card__shape
+{
+  background-color: #b5f3ff;
+  filter: blur(50px);
+  border-radius: 50%;
+  width: 280px;
+  height: 250px;
+  position: absolute;
+  left: calc(50% - 135px);
+  top: 280px;
+}
+
+/* Swiper class */
+.swiper-pagination-bullet
+{
+  background-color: var(--white-color);
+}
+.swiper-pagination-bullet-active
+{
+  background-color: var(---light-first-color);
+}
 /* Button animate */
 
 
 /*=============== BUTTON ===============*/
 
 
-/*=============== ABOUT ===============*/
+/*=============== WORK ===============*/
+.work__container
+{
+  display: grid;
+  row-gap: 1.5rem;
+}
 
+.work__title
+{
+  font-family: var(--body-heading-font);
+  color: var(---light-first-color);
+  font-size: var(--h2-font-size);
+  justify-self: center;
+  align-self: center;
+}
+
+.work__data
+{
+  justify-content: center;
+  row-gap: 1.5rem;
+}
+
+.work__cards
+{
+  background-color: transparent;
+  text-align: center;
+  width: 240px;
+  height: 200px;
+}
+/* =============WORKS-CARDS-IMAGE======== */
+.work__cards-img
+{
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  background-color: var(--green-alt-color);
+  cursor: pointer;
+}
+
+.work__cards-img i
+{
+  color: #000;
+  font-size: 1.5rem;
+}
+/* ______________________________________ */
+/*==============WORKS-CARDS-DATA========== */
+.work__cards-title
+{
+  color: var(--white-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: var(--h3-font-size);
+}
+.work__cards-description
+{
+  font-size: .875rem;
+}
+/*___________________________________________*/
 
 /*=============== POPULAR ===============*/
 
 
-/* Swiper class */
+
 
 
 /*=============== FEATURES ===============*/
