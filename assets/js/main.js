@@ -58,9 +58,9 @@ function scrollHeader ()
 
 window.addEventListener('scroll', scrollHeader);
 /*=============== HOME CARDS SWIPER ===============*/
-let swiperHomeCard = new Swiper(".swiper", { 
+let swiperHomeCard = new Swiper(".home__cards", { 
     loop: true,
-    spaceBetween: 20,
+    spaceBetween: 25,
     slidesPerView: 'auto',
     grabCursor: true,
     pagination: {
@@ -82,6 +82,32 @@ let swiperHomeCard = new Swiper(".swiper", {
         },
     },
 });
+
+
+const swiperOption = {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+                },
+    pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            }
+};
+
+const swiperAuctionCard = new Swiper(".auction__data", swiperOption);
+
+
+
+
 
 /*=============== MIXITUP FILTER FEATURED ===============*/
 
