@@ -105,7 +105,20 @@ const swiperOption = {
 
 const swiperAuctionCard = new Swiper(".auction__data", swiperOption);
 
-
+let swiperPopularCard = new Swiper(".popular__content", { 
+    
+    loop: true,
+    spaceBetween: 21,
+    slidesPerView: 'auto',
+    grabCursor: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+});
 
 
 

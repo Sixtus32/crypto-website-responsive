@@ -80,6 +80,7 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -91,7 +92,6 @@ img {
 
 .grid {
   display: grid;
-  gap: 1.5rem;
 }
 
 .flex
@@ -101,14 +101,16 @@ img {
 
 .button-primary
 {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
+  margin: 0 auto;
   background-color: var(--green-alt-color);
   color: #000;
   padding: 1rem 2.5rem;
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: 700;
+  outline: none;
   border: none;
+  cursor: pointer;
 }
 .section {
   padding: 3.5rem 0 2rem;
@@ -122,6 +124,37 @@ img {
   color: var(---light-first-color);
   justify-self: center;
   align-self: center;
+}
+
+.image__slider
+{
+  margin: 0 auto;
+  width: 120px;
+  height: 50px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.image__slider-mov
+{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #013055;
+  width: 50px;
+  border-radius: 0.6rem;
+  position: sticky;
+  border: none;
+}
+
+.image__slider-mov i
+{
+  color: var(--white-color);
+  font-size: 1.75rem;
 }
 
 .main {
@@ -607,6 +640,7 @@ img {
 {
   display: grid;
   row-gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .work__title
@@ -616,13 +650,13 @@ img {
   font-size: var(--h2-font-size);
   justify-self: center;
   align-self: center;
-  margin-top: 1.25rem;
+  margin-top: .5rem;
 }
 
 .work__data
 {
   justify-content: center;
-  row-gap: 1.5rem;
+  /* row-gap: 1.5rem; */
 }
 
 .work__cards
@@ -835,6 +869,7 @@ img {
   justify-content: center;
   align-items: center;
   column-gap: .8rem;
+  margin-bottom: 2rem;
 }
 
 .mov-button
@@ -877,20 +912,388 @@ img {
   display: flex;
   margin: 0 auto;
   margin-top: 1.25rem;
+  color: #000;
+  font-weight: 700;
+  margin-top: 1.75rem;
+}
+
+/*=============== PARTNERS ===============*/
+
+.partner__logo
+{
+  margin-top: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 1rem;
+}
+.partner__logo-img
+{
+  height: 100px;
+  transition: .3s;
+  opacity: .8;
+  width: 120px;
+  object-fit: contain;
+}
+
+.partner__logo-img:hover
+{
+  opacity: 1;
+}
+/*=============== ARTISTS ===============*/
+
+.artist__container
+{
+  background-color: #293553;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.artist__content
+{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.artist__title
+{
+  text-align: initial;
+  margin-bottom: 1.25rem;
+}
+
+.artist__card
+{
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  border: solid 1px #16D8FF;
+  padding: 0 .5rem;
+  border-radius: .6rem;
+}
+
+.artist__card-user
+{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: .8rem;
+  row-gap: .4rem;
+}
+
+.artist__card-img
+{
+  height: 80%;
+  border-radius: 50%;
+}
+
+.artist__card-name
+{
+  color: var(--green-alt-color);
+}
+
+.artist__card-price
+{
+  color: #fff;
+}
+
+.artist__card-rate
+{
+  display: inline-block;
+  border-left: solid 1px var(---light-first-color);
+  width: 30%;
+  height: 60%;
+  text-align: center;
+  padding-top: .4rem;
+}
+
+.artist__card-number
+{
+  color: #fff;
+  font-weight: 700;
+}
+
+.artist__card-enun
+{
+  font-size: .675rem;
+}
+
+/*============= EXCLUSIVE =================*/
+.exclusive__title
+{
+  text-align: initial;
+  margin-bottom: 1.25rem;
+}
+
+.exclusive__img-container
+{
+  background-color: var(---light-first-color);
+  border-radius: .8rem;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  padding: .8rem;
+}
+
+.exclusive__img
+{
+  border-radius: .8rem;
+  width: 100%;
+}
+
+.exclusive__coll
+{
+  margin-top: 1.5rem;
+  row-gap: 1.75rem;
+}
+
+.exclusive__owner
+{
+  row-gap: 1rem;
+}
+
+.exclusive__owner-date
+{
+  font-size: var(--normal-font-size);
+}
+
+.exclusive__owner-enun
+{
+  font-family: var(--body-heading-font);
+  font-weight: 500;
+  font-size: var(--h2-font-size);
+  color: #fff;
+}
+
+.exclusive__user
+{
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.exclusive__user-img
+{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.exclusive__user-type
+{
+  font-size: 1rem;
+  color: var(---light-first-color);
+}
+
+.exclusive__user-name
+{
+  font-size: 1rem;
+  color: var(--green-alt-color);
+}
+
+.exclusive__release
+{
+  margin-bottom: 1.5rem;
+  row-gap: 1.5rem;
+  width: 100%;
+}
+
+.exclusive__release-enun
+{
+  font-size: 1.25rem;
+  color: var(---light-first-color);
+}
+
+.exclusive__date
+{
+  justify-content: center;
+  column-gap: 1.2rem;
+  width: 100%;
+}
+
+.exclusive__date-card
+{
+  width: 95px;
+  height: 80px;
+  border-radius: .8rem;
+  padding: 1rem 2rem;
+  background-color: #243467;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exclusive__date-card .date-number
+{
+  font-family: var(--body-heading-font);
+  color: var(---light-first-color);
+  font-weight: 700;
+}
+
+.exclusive__date-card .date-sect
+{
+  color: var(---light-first-color);
+  font-family: var(--body-heading-font);
+  font-weight: 700;
 }
 
 
-/*=============== FEATURES ===============*/
+/* ==============POPULAR=================== */
+.popular__container
+{
+  row-gap: 1.75rem;
+}
 
+.popular__content
+{
+  width: 100%;
+  height: 350px;
+  justify-self: center;
+}
 
-/*=============== FEATURED ===============*/
+.popular__card
+{
+  width: 300px;
+  height: 300px;
+  background-color: #243467;
+  padding: .8rem 1rem;
+  row-gap: 1rem;
+  border-radius: .8rem;
+  margin-left: .8rem;
+}
 
+.popular__user
+{
+  width: 100%;
+  height: 25%;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.popular__user-data
+{
+  column-gap: .6rem;
+  align-items: center;
+}
+.popular__user-img
+{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.popular__info-type
+{
+  font-size: 1rem;
+  color: var(---light-first-color);
+}
+
+.popular__info-name
+{
+  color: var(--green-alt-color);
+}
+
+.popular__user-int
+{
+  column-gap: .3rem;
+  align-items: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.popular__gallery-img1{grid-area: first; height: 100%; width: 100%;}
+.popular__gallery-img2{grid-area: second; height: 100%; width: 100%;}
+.popular__gallery-img3{grid-area: third; height: 100%; width: 100%;}
+
+.popular__gallery
+{
+  width: 100%;
+  height: 75%;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+    'first second'
+    'first third';
+  position: relative;
+}
+
+.popular__gallery-img
+{
+  position: absolute;
+  border-radius: .8rem;
+}
 /* Active link featured */
 
 
-/*=============== OFFER ===============*/
+/*=============== JOIN ===============*/
+.join__container
+{
+  width: 90%;
+  height: auto;
+  background-color: #243467;
+  border-radius: .8rem;
+  padding: 2rem;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.join__img1{grid-area: f; height: 100%; width: 100%;}
+.join__img2{grid-area: s; height: 100%; width: 100%;}
+.join__img3{grid-area: t; height: 100%; width: 100%;}
 
+
+.join__card
+{
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  padding: 0;
+  position: relative;
+  border-radius: .8rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  'f s'
+  'f t';
+  justify-content: center;
+}
+.join__image
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: .8rem;
+}
+
+.join__title
+{
+  text-align: initial;
+  margin-bottom: 1.25rem;
+}
+
+.join__input
+{
+  padding: .8rem;
+  width: 100%;
+  border-radius: .8rem;
+  background-color: #1a264cf3;
+  color: #fff;
+  border: .1rem solid var(---light-first-color);
+  margin-bottom: 1.25rem;
+}
+
+.join__input::placeholder
+{
+  color: #fff;
+  font-size: .675rem;
+}
+
+.join__button
+{
+  margin: 0;
+}
 
 /*=============== LOGOS ===============*/
 
