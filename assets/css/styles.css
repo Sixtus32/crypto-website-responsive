@@ -1159,7 +1159,7 @@ img {
   height: 300px;
   background-color: #243467;
   padding: .8rem 1rem;
-  row-gap: 1rem;
+  row-gap: .8rem;
   border-radius: .8rem;
   margin-left: .8rem;
 }
@@ -1252,7 +1252,7 @@ img {
   padding: 0;
   position: relative;
   border-radius: .8rem;
-  gap: 1rem;
+  gap: .8rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: 
   'f s'
@@ -1265,6 +1265,7 @@ img {
   height: 100%;
   position: absolute;
   border-radius: .8rem;
+  object-fit: cover;
 }
 
 .join__title
@@ -1300,6 +1301,7 @@ img {
 {
  position: relative;
  overflow: hidden;
+ background-color: #14375474;
 }
 
 .footer__container
@@ -1343,7 +1345,7 @@ img {
 .footer__link:hover,
 .footer__social-link:hover
 {
-  color: var(--title-color);
+  color: #16D8FF;
 }
 
 .footer__social
@@ -1358,7 +1360,7 @@ img {
   background-color: #013055;
   border-radius: .5rem;
   display: flex;
-  padding: .675rem;
+  padding: .5rem;
 }
 
 .footer__copy
@@ -1376,13 +1378,44 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar
+{
+  width: 0.5rem;
+  background-color: #011a20;
+}
 
+::-webkit-scrollbar-thumb:hover
+{
+  background-color: #16D8FF;
+  border-radius: 1rem;
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup
+{
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: #013055;
+  color: #16D8FF;
+  font-size: 1.15rem;
+  z-index: var(--z-tooltip);
+  transition: .2s;
+  display: inline-flex;
+  padding: .5rem;
+  border-radius: 50%;
+}
 
+.scrollup:hover
+{
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up*/
-
+.show-scroll
+{
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
